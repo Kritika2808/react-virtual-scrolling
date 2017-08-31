@@ -47,8 +47,7 @@ export class VirtualScroll extends React.Component {
     virtualScrollHeight = totalRowHeight < virtualScrollHeight ? totalRowHeight : virtualScrollHeight;
 
     return (
-      <div className='virtualScrollContainer'
-        style={{ height: `${virtualScrollHeight}px` }}>
+      <div style={{ height: `${virtualScrollHeight}px`, overflowY: 'auto' }}>
         {
           activateVirtualScroll ?
           this.props.rowRenderer(
