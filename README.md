@@ -22,9 +22,9 @@ Benefits -
 
 Thus, for the above solution, react-virtual-scrolling is created. It's key benefits are-
 
-Enhanced performance ( if earlier, list rendering was taking 6s, now it takes some milliseconds only ).
-Better control on DOM
-Any number of rows can be rendered, no limit on the number of rows that can be rendered.
+- Fast performance ( if earlier, list rendering was taking 6s, now it takes some milliseconds only ).
+- Better control on DOM
+- Any number of rows can be rendered, no limit on the number of rows that can be rendered.
 
 ## Installation
 
@@ -46,7 +46,7 @@ render() {
                 rows={this.data}
                 scrollContainerHeight={400} // height of the container that would remain visible
                 totalNumberOfRows={(this.data.length) || 0}
-                rowHeight={25} // for now, only fixed height rows can be rendered in the componnet
+                rowHeight={25} // for now, only fixed height rows can be rendered in the component
                 rowRenderer={this.contentRenderer.bind(this)} // function for rendering different type of lists 
             />
         </div> 
@@ -76,8 +76,6 @@ render() {
     );
   }
 
-
-```
 
 ```
 
