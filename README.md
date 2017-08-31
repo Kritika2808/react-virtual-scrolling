@@ -24,7 +24,7 @@ Thus, for the above solution, react-virtual-scrolling is created. It's key benef
 
 - Fast performance ( if earlier, list rendering was taking 6s, now it takes some milliseconds only ).
 - Better control on DOM
-- Any number of rows can be rendered, no limit on the number of rows that can be rendered.
+- Any number of rows can be rendered, no limit on the number of rows.
 
 ## Installation
 
@@ -43,7 +43,7 @@ render() {
             <VirtualScroll
                 {...this.props}
                 ref="virtualScroll"
-                rows={this.data}
+                rows={this.data} // data of around 50000 rows
                 scrollContainerHeight={400} // height of the container that would remain visible
                 totalNumberOfRows={(this.data.length) || 0}
                 rowHeight={25} // for now, only fixed height rows can be rendered in the component
@@ -85,9 +85,9 @@ Please find the working example of the above component here https://kritika2808.
 
 ## Restriction 
 
-Only fixed height rows can be rendered in the component.
+Fixed height rows can be rendered for now.
 
 ## Upcoming versions
 
-Buffering/caching will be included in upcoming versions
+Upcoming versions are going to include 'buffering/caching' feature while scrolling.
 
